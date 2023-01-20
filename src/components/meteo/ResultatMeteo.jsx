@@ -1,29 +1,29 @@
 import React from 'react';
 
 export const ResultatMeteo = (props) => {
-    // const style = {
-    //     card: {
-    //         width: "40vw",
-    //         borderRadius: '2em',
-    //         backgroundColor: "#2a5f7e",
-    //         boxShadow: "20px 20px 60px #24516b, -20px -20px 60px #306d91",
-    //         padding: "2em"
-    //     },
-    //     cardHeader: {
+    const style = {
+        card: {
+            width: "40vw",
+            //  borderRadius: '2em',
+            //backgroundColor: "#2a5f7e",
+            // boxShadow: "20px 20px 60px #24516b, -20px -20px 60px #306d91",
+            padding: "2em"
+        },
+        cardHeader: {
 
-    //     },
-    //     cardBody: {
+        },
+        cardBody: {
 
-    //     },
-    //     flex: {
-    //         display: "flex",
-    //         justifyContent: "space-around",
-    //         alignItems: " baseline"
-    //     }
-    // }
+        },
+        flex: {
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: " baseline"
+        }
+    }
     return (
-        <div>
-            <h2>{props.resultat.name}</h2>
+        <div style={style.card}>
+            <h2 style={{ textAlign: "center" }}>{props.resultat.name}</h2>
             <div>
                 <div>
                     {props.resultat.weather[0].description} <img src={`https://openweathermap.org/img/wn/${props.resultat.weather[0].icon}@2x.png`} alt={props.resultat.weather[0].description}></img>

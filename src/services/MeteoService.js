@@ -10,7 +10,6 @@ let init = {
 };
 class MeteoService {
     getMeteoByVille = async (ville) => {
-        // fetch('api.openweathermap.org/data/2.5/weather?q=Lille&appid=c06516a3bb199bb320181c589f72433c&lang=fr&units=metric',init).then(res => res.json())
         return await fetch(`${url}?q=${ville}&appid=${apiKey}&lang=fr&units=metric`, init).then(res => res.json())
     }
 
